@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6LK-l4-8D2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4av-nE-ybh">
+            <objects>
+                <tableViewController id="6LK-l4-8D2" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="APG-fF-tOW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="4Lh-F9-VCm" customClass="DynamicTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Lh-F9-VCm" id="E0Q-7m-Z6L">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qk5-Pc-Ot9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <color key="backgroundColor" red="0.36470588240000001" green="0.60392156860000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="qk5-Pc-Ot9" secondAttribute="height" multiplier="16:3" id="Loc-gm-6IO"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixw-zG-PVR">
+                                            <rect key="frame" x="0.0" y="60" width="375" height="39"/>
+                                            <color key="backgroundColor" red="0.1529411765" green="0.72941176470000002" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="39" id="L5a-mT-TXA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qk5-Pc-Ot9" firstAttribute="top" secondItem="E0Q-7m-Z6L" secondAttribute="top" id="0tP-Zg-LFM"/>
+                                        <constraint firstItem="qk5-Pc-Ot9" firstAttribute="leading" secondItem="E0Q-7m-Z6L" secondAttribute="leading" id="5ET-ee-bNp"/>
+                                        <constraint firstItem="ixw-zG-PVR" firstAttribute="leading" secondItem="E0Q-7m-Z6L" secondAttribute="leading" id="BlX-NA-qtK"/>
+                                        <constraint firstAttribute="bottom" secondItem="ixw-zG-PVR" secondAttribute="bottom" id="RAM-FL-TQA"/>
+                                        <constraint firstAttribute="trailing" secondItem="qk5-Pc-Ot9" secondAttribute="trailing" id="VFp-L0-bSh"/>
+                                        <constraint firstAttribute="trailing" secondItem="ixw-zG-PVR" secondAttribute="trailing" id="fra-9Q-Li7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="ixw-zG-PVR" id="qFa-Ll-NhA"/>
+                                    <outlet property="myImageView" destination="qk5-Pc-Ot9" id="VHQ-pP-6as"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6LK-l4-8D2" id="9NW-Ly-8Xu"/>
+                            <outlet property="delegate" destination="6LK-l4-8D2" id="pnG-pV-g0w"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmy-pu-VGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="225"/>
+        </scene>
+    </scenes>
+</document>
